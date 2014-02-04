@@ -23,7 +23,7 @@
  * For full information about creating Moodle themes, see:
  * http://docs.moodle.org/dev/Themes_2.0
  *
- * @package    theme_cleanpurplesp14
+ * @package    theme_cleanpurple
  * @copyright  2013 Moodle, moodle.org
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -32,7 +32,7 @@ defined('MOODLE_INTERNAL') || die;
 
 $plugin->version   = 2014010100;
 $plugin->requires  = 2013050100;
-$plugin->component = 'theme_cleanpurplesp14';
+$plugin->component = 'theme_cleanpurple';
 $plugin->dependencies = array(
     'theme_bootstrapbase'  => 2013050100,
 );

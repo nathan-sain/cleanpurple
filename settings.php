@@ -23,7 +23,7 @@
  * For full information about creating Moodle themes, see:
  * http://docs.moodle.org/dev/Themes_2.0
  *
- * @package   theme_cleanpurplesp14
+ * @package   theme_cleanpurple
  * @copyright 2013 Moodle, moodle.org
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -33,34 +33,34 @@ defined('MOODLE_INTERNAL') || die;
 if ($ADMIN->fulltree) {
 
     // Invert Navbar to dark background.
-    $name = 'theme_cleanpurplesp14/invert';
-    $title = get_string('invert', 'theme_cleanpurplesp14');
-    $description = get_string('invertdesc', 'theme_cleanpurplesp14');
+    $name = 'theme_cleanpurple/invert';
+    $title = get_string('invert', 'theme_cleanpurple');
+    $description = get_string('invertdesc', 'theme_cleanpurple');
     $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $settings->add($setting);
 
     // Logo file setting.
-    $name = 'theme_cleanpurplesp14/logo';
-    $title = get_string('logo','theme_cleanpurplesp14');
-    $description = get_string('logodesc', 'theme_cleanpurplesp14');
+    $name = 'theme_cleanpurple/logo';
+    $title = get_string('logo','theme_cleanpurple');
+    $description = get_string('logodesc', 'theme_cleanpurple');
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'logo');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $settings->add($setting);
 
     // Custom CSS file.
-    $name = 'theme_cleanpurplesp14/customcss';
-    $title = get_string('customcss', 'theme_cleanpurplesp14');
-    $description = get_string('customcssdesc', 'theme_cleanpurplesp14');
+    $name = 'theme_cleanpurple/customcss';
+    $title = get_string('customcss', 'theme_cleanpurple');
+    $description = get_string('customcssdesc', 'theme_cleanpurple');
     $default = '';
     $setting = new admin_setting_configtextarea($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $settings->add($setting);
 
     // Footnote setting.
-    $name = 'theme_cleanpurplesp14/footnote';
-    $title = get_string('footnote', 'theme_cleanpurplesp14');
-    $description = get_string('footnotedesc', 'theme_cleanpurplesp14');
+    $name = 'theme_cleanpurple/footnote';
+    $title = get_string('footnote', 'theme_cleanpurple');
+    $description = get_string('footnotedesc', 'theme_cleanpurple');
     $default = '';
     $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');

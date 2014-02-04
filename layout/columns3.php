@@ -29,7 +29,7 @@
  */
 
 // Get the HTML for the settings bits.
-$html = theme_cleanpurplesp14_get_html_for_settings($OUTPUT, $PAGE);
+$html = theme_cleanpurple_get_html_for_settings($OUTPUT, $PAGE);
 
 if (right_to_left()) {
     $regionbsid = 'region-bs-main-and-post';
