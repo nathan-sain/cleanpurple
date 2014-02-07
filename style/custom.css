@@ -532,6 +532,10 @@ width: 100%;
 	margin-left: auto !important;
 }
 
+#page-grade-grading-form-guide-edit #region-main {
+	width: 100%;
+}
+
 /* increase the width of the rubric editor */
 #page-grade-grading-form-rubric-edit #region-main {
 	width: 100%;
