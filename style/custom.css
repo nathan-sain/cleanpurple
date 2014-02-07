@@ -457,7 +457,7 @@ display: inline;
 /* ************************* Forms *****************************************
  * Form editor is compressed by labels. Move the edit area below label and 
  * configure it to use 100% of the space 
-*/
+
 .felement.feditor {
   clear: both;
   margin: 0 !important;
@@ -468,7 +468,7 @@ display: inline;
 #id_content_editor_tbl {
   width: 100%;
 }
-
+*/
 /* *****************************Gradebook Pages******************************** 
  * Grade tables are using default font-face and small size. We are using sarifed 
  * fonts and this makes it hard to read. Bump up the font and swich to sans-serif 
