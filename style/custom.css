@@ -94,9 +94,12 @@ width: 90%;
 
 /* header one
  * navigation bar
- * I prefer to have the bread crumbs be fixed instead of the main site bar. This has required some messing with the
- * .navbar-fixed-top styles
+ * I prefer to have the bread crumbs be fixed instead of the main menu bar. This has required some messing with the
+ * .navbar-fixed-top styles and the inclusing of some custom javascript.
+ * If it stops working check the HTML class attributes, and the javascript.
 */
+
+/* This creates a slight showdow to seperate the menu bar at the top from the breadcrumbs bar below */
 .navbar-inner {
    min-height: 40px;
    padding-right: 0px;
@@ -126,6 +129,9 @@ width: 90%;
 	   -moz-box-shadow: -5px 8px 12px -4px #333;
 	}
 }
+
+/* Menu colors: text color for menu bar should be white with light purple highlight for menu item hover and orange highlight on link hover */
+
 .navbar-text {
     margin-bottom: 0px;
     line-height: 40px;
@@ -192,6 +198,9 @@ width: 90%;
  * Breadcrumb bar
  * and page title 
  */
+
+
+/* these stiles are activated by the javascript when the window scrolls past the breadcrumb bars position causing it to stick at the top of the page */
  
 @media (min-width: 768px) {
 	 .stickybreadcrumb {
@@ -248,6 +257,8 @@ width: 90%;
 }
 
 
+/* highlight the edit button when editing is on */
+
 input[value="Turn editing off"] {
     background-color: rgb(253, 184, 19);
     background-image: none;
@@ -258,6 +269,7 @@ input[value="Turn editing off"] {
  * Moodle theme
 */
 
+/* set block borders to be slightly rounded and use the same colors as the main Ozarks web pages */
  
 .block {
   border-radius: 0px 0px 4px 4px;
@@ -270,12 +282,17 @@ input[value="Turn editing off"] {
 }
 
 @media (min-width: 980px) {
+        /* these styles create the ribbon headings for the blocks
+         * because the ribbon wraps over only one side of the block
+         * the style must be set for each side of the page
+        */
 
 	/* right column */
 	#block-region-side-post {
 		padding-right: 10px;
 	}
 	#block-region-side-post .block_action { float: left;}
+
 
 	#block-region-side-post .title h2 {
 	 position: relative;
@@ -350,7 +367,7 @@ input[value="Turn editing off"] {
 }
 /******************************* My Courses page ***************************/
 
-/* Remove the title on the My Courses page */
+/* Remove the title on the My Courses page this is usless information*/
 #page-my-index #page-header h1 {
 font-size: 1px;
 color: #fff;
@@ -430,6 +447,12 @@ width: auto;
 	font-size: inherit !important;
 }
 
+/* fix the display of multipule choice items in feedback. Currently form lables are set to display block which makes the text of the multipule choice item display below the check box.
+*/
+.feedback_item_radiolabel_v_left label {
+display: inline;
+}
+
 
 /* ************************* Forms *****************************************
  * Form editor is compressed by labels. Move the edit area below label and 
@@ -493,16 +516,12 @@ width: 100%;
 }
 
 
-/* fix the display of multipule choice items in feedback. Currently form lables are set to display block which makes the text of the multipule choice item display below the check box.
-*/
-.feedback_item_radiolabel_v_left label {
-display: inline;
-}
 
 
-/* additional fixes for rubric and marking guides 
+/* fixes for rubric and marking guides 
 */
 
+/* increase the width of the marking guide editor */
 #fitem_id_advancedgrading .fitemtitle {
 	width: auto !important;
 	float: none;
@@ -511,4 +530,9 @@ display: inline;
 
 #fitem_id_advancedgrading .felement {
 	margin-left: auto !important;
+}
+
+/* increase the width of the rubric editor */
+#page-grade-grading-form-rubric-edit #region-main {
+	width: 100%;
 }
